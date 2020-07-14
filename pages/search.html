@@ -1,0 +1,15 @@
+<style>
+    .input-group.md-form.form-sm.form-2.pl-0 {
+        display: none;
+    }
+</style>
+
+<div ng-controller="MainCtrl">
+
+    <input type='text' ng-model='searchText' class="form-control" placeholder="Search " />
+
+        <ul>
+            <li ng-repeat='person in people | filter:searchText'> {{person.name}} </li>
+        </ul>
+
+</div>
